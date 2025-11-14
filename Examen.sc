@@ -17,7 +17,7 @@ def myMethod(datos: List[Double]): Double = {
 // recibir la lista de precios y, además, la función que representa la regla de ajuste que se quiera
 // aplicar en ese momento. Esta función deberá retornar una nueva lista de precios ya modificados de
 // acuerdo con la política específica que se haya suministrado.
-def ajustarPrecios(precios: List[Double], politica: Double): List[Double] = {
+def ajustePrecio(precios: List[Double], politica: Double): List[Double] = {
   precios.map(politica)
 }
 
@@ -28,7 +28,7 @@ def ajustarPrecios(precios: List[Double], politica: Double): List[Double] = {
 //  (incremento: Int) =>
 //    (x: Int) =>
 //      x + incremento
-def generadorIncrementador(incremento: Int): Int => Int = {
+def generadorIncrementadorAnonimo(incremento: Int): Int => Int = {
   def incrementar(x: Int): Int = x + incremento
   incrementar
 }
