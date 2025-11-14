@@ -32,3 +32,23 @@ def generadorIncrementadorAnonimo(incremento: Int): Int => Int = {
   def incrementar(x: Int): Int = x + incremento
   incrementar
 }
+//Con ia
+//Primera pregunta
+def myMetho(datos: List[Double]): Double = {
+  val logs = datos.map(Math.log)
+
+  val promedioLog = logs.sum / logs.size
+
+  val sumaCuadrados = logs.map(x => math.pow(x - promedioLog, 2)).sum
+
+  math.sqrt(sumaCuadrados / logs.size)
+}
+//Segunda pregunta
+def ajustarPrecios(precios: List[Double], politica: Double => Double): List[Double] = {
+  precios.map(politica)
+}
+//Tercera pregunta
+def generadorIncrementador(incremento: Int): Int => Int = {
+  def incrementar(x: Int): Int = x + incremento
+  incrementar
+}
